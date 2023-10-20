@@ -73,12 +73,12 @@ html {
   --textColor : var(--dark-mode-text-color);
 }
 
-@media (prefers-color-scheme :dark){
+/* @media (prefers-color-scheme :dark){
   :root{
   --backgroundColor: var(--dark-mode-bg-color);
   --textColor: var(--dark-mode-text-color);
   }
-}
+} */
 body {
   background:var(--backgroundColor);
   color: var(--textColor);
@@ -302,18 +302,17 @@ PROJECT CSS
 Toggle Container
 ========
 */
-
 .toggle-container {
   width: var(--view-width);
   max-width: var(--max-width);
   padding: 1rem 0;
   margin: 0 auto;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .dark-toggle {
-  background: transparent;
+  background:transparent;
   border-color: transparent;
   width: 5rem;
   height: 2rem;
@@ -321,21 +320,25 @@ Toggle Container
   place-items: center;
   cursor: pointer;
 }
+
 .toggle-icon {
   font-size: 1.5rem;
-  color: var(--textColor);
+  color: var(--textColor)
 }
 /* 
 ========
 Search Form
 ========
 */
+
 .title {
   color: var(--primary-500);
 }
+
 .search-form {
   width: var(--view-width);
   max-width: var(--fixed-width);
+  padding: 1rem 0;
   margin: 0 auto;
   margin-top: 2rem;
   display: grid;
@@ -343,22 +346,20 @@ Search Form
 }
 
 .search-input {
-  border-color: var(--grey-300);
+  border-radius: var(--grey-300);
   transition: var(--darkModeTransition);
-  color: var(--textColor);
+  color:  var(--textColor);
   border-radius: 0;
-
-  /* border-right: none; */
 }
 
 .search-form .btn {
   border-radius: 0;
 }
+
 .search-form .btn:hover {
   background: var(--primary-300);
-  color: var(--black);
+  color: black;
 }
-
 /* 
 ========
 Gallery
@@ -377,12 +378,13 @@ Gallery
   height: 10rem;
 }
 
-@media (min-width: 768px) {
-  .image-container {
+@media(min-width: 768px){
+  .image-container{
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 992px) {
+
+@media(min-width: 992px) {
   .image-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
